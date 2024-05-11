@@ -5,7 +5,6 @@ const cardsflipperHandler = () => {
     // flip cards
     cards.forEach(el => {
         el.addEventListener("click", function(event){
-            console.log(this);
             checker(this);
         })
     })

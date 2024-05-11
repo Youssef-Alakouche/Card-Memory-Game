@@ -15,18 +15,24 @@ let counter = 0;
 function checker(event){
     
     if(Array.from(event.classList).includes("card")){
-        console.log("sdfsd");
+        
         if(counter == 0){
-            console.log(event);
+            // rotate the first card of the matched paire
             event.classList.add("rotate");
+            
+            // point to the first card of the matched paire
             firstElement.value = event;
             firstElement.value.style.pointerEvents = "none";
+
+
             counter = 1;
 
         }else if(counter == 1){
             
+            // retate the clicked card
             event.classList.add("rotate");
 
+            // checking the clicked card is match the first clicked card
             if(!(firstElement.value.dataset.type == event.dataset.type && event != firstElement.value)){
                 setTimeout(() => {
                     event.classList.remove("rotate");

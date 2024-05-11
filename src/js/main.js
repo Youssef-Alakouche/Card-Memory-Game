@@ -49,6 +49,7 @@ function main(){
     // flip cards
     cardsflipperHandler();
     
+    // start the game
     start.onclick = () => StartGameHandler(overlay, playerName);
     
 }
